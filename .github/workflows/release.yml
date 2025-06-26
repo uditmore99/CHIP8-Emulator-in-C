@@ -1,0 +1,34 @@
+name: Build and Release CHIP-8 Emulator
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v3
+
+      - name: 🛠️ Set up MinGW
+        uses: egor-tensin/setup-mingw@v2
+        with:
+          platform: x64
+
+      - name: 📦 Install SDL2 (x64)
+        run: |
+          curl -LO https://github.com/libsdl-org/SDL/releases/download/release-2.32.8/SDL2-devel-2.32.8-mingw.zip
+          tar -xf SDL2-devel-2.32.8-mingw.zip
+          move SDL2-*/x86_64-w64-mingw32 include lib
+
+      - name: 🧱 Build CHIP8 Emulator
+        run: |
+          gcc main.c -Isrc/include -Lsrc/lib -lSDL2main -lSDL2 -o CHIP8-Emulator.exe
+
+      - name: 📤 Upload to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: CHIP8-Emulator.exe
