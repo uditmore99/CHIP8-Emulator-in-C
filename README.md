@@ -4,16 +4,28 @@
 
 This is a basic CHIP-8 emulator written in C using the SDL2 library for graphics and input. It supports running CHIP-8 games via a simple drag-and-drop interface.
 
-## 📸 Screenshots
-
-[![Screenshot-2025-06-26-222438.png](https://i.postimg.cc/Y2XCQjBq/Screenshot-2025-06-26-222438.png)](https://postimg.cc/8s6GSpCq)
-[![Screenshot-2025-06-26-222238.png](https://i.postimg.cc/yxfxd8sx/Screenshot-2025-06-26-222238.png)](https://postimg.cc/30vYf7yQ)
-[![Screenshot-2025-06-26-222355.png](https://i.postimg.cc/9MbF8Q4b/Screenshot-2025-06-26-222355.png)](https://postimg.cc/8JFSsDmf)
-[![Screenshot-12.png](https://i.postimg.cc/K8WTfJXj/Screenshot-12.png)](https://postimg.cc/75gbY1Zr)
-
 ## ⚙️ Installation (Windows)
 
-Follow these steps to set up your environment for building the CHIP-8 emulator on Windows:
+You have **two options** to run the CHIP-8 Emulator on Windows:
+
+---
+
+### 🅰️ Option 1: Download Pre-Built Executable
+
+The easiest way to run the emulator and almost no setup needed.
+
+1. Go to the [Releases](https://github.com/uditmore99/CHIP8-Emulator-in-C/releases/) section of this repository.
+2. Download the latest `.exe` and `SDL2.dll`.
+3. Place **both files in the same folder**.
+4. Drag and drop your preffered CHIP-8 ROMS into the `CHIP8-Emulator.exe` to launch the emulator.
+
+> 💡 Make sure `SDL2.dll` is in the **same folder** as the `.exe`, or it won’t run.
+
+---
+
+### 🅱️ Option 2: Build From Source (Recommended for Devs)
+
+Follow these steps to set up your environment and compile the project manually:
 
 ### 1️⃣ Install MinGW (GCC Compiler)
 
@@ -114,9 +126,17 @@ Place `.ch8` ROM files in the `games/` folder. You can find many CHIP-8 games on
 
 ---
 
+## 📸 Screenshots
+
+[![Screenshot-2025-06-26-222438.png](https://i.postimg.cc/Y2XCQjBq/Screenshot-2025-06-26-222438.png)](https://postimg.cc/8s6GSpCq)
+[![Screenshot-2025-06-26-222238.png](https://i.postimg.cc/yxfxd8sx/Screenshot-2025-06-26-222238.png)](https://postimg.cc/30vYf7yQ)
+[![Screenshot-2025-06-26-222355.png](https://i.postimg.cc/9MbF8Q4b/Screenshot-2025-06-26-222355.png)](https://postimg.cc/8JFSsDmf)
+[![Screenshot-12.png](https://i.postimg.cc/K8WTfJXj/Screenshot-12.png)](https://postimg.cc/75gbY1Zr)
+
 ---
 
 ## 🧠 Credits & License
 
 - Took help of [Cowgod's Chip8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM#2.5)
 - SDL2 licensed under [zlib License](https://www.libsdl.org/license.php)
+- This was a hobby project. I tried to make it as simple as possible. If you want to discuss regarding the same, please message me on [X/Twitter](x.com/uditmore99)

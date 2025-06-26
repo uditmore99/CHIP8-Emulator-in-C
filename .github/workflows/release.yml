@@ -31,6 +31,7 @@ jobs:
 
           copy "SDL2-2.30.3\x86_64-w64-mingw32\include\SDL2\*.h" include\SDL2
           copy "SDL2-2.30.3\x86_64-w64-mingw32\lib\*.a" lib
+          copy "SDL2-2.30.3\x86_64-w64-mingw32\bin\SDL2.dll" SDL2.dll
 
       - name: 🧱 Build CHIP-8 Emulator
         run: |
@@ -39,4 +40,9 @@ jobs:
       - name: 📤 Upload to Release
         uses: softprops/action-gh-release@v2
         with:
-          files: CHIP8-Emulator.exe
+          files: |
+            CHIP8-Emulator.exe
+            SDL2.dll
+          body: |
+            Place `SDL2.dll` and `CHIP8-Emulator.exe` in the same folder before running.
+            Drag-and-drop games into `CHIP8-Emulator.exe` to start the emulator.

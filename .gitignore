@@ -1,0 +1,11 @@
+# Ignore VSCode settings
+.vscode/
+
+# Ignore compiled binary
+main.exe
+
+# Ignore compiled binary
+CHIP8-Emulator.exe
+
+# DO NOT ignore .github (GitHub Actions lives here!)
+!.github/
