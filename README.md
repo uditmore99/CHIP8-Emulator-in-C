@@ -139,4 +139,4 @@ Place `.ch8` ROM files in the `games/` folder. You can find many CHIP-8 games on
 
 - Took help of [Cowgod's Chip8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM#2.5)
 - SDL2 licensed under [zlib License](https://www.libsdl.org/license.php)
-- This was a hobby project. I tried to make it as simple as possible. If you want to discuss regarding the same, please message me on [X/Twitter](x.com/uditmore99)
+- This was a hobby project. I tried to make it as simple as possible. If you want to discuss regarding the same, please message me on [X/Twitter](https://x.com/uditmore99)
