@@ -19,11 +19,13 @@ jobs:
           echo "C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin" >> $GITHUB_PATH
 
       - name: 📦 Install SDL2
-        run: |
-          curl -LO https://github.com/libsdl-org/SDL/releases/download/release-2.30.3/SDL2-devel-2.30.3-mingw.zip
-          tar -xf SDL2-devel-2.30.3-mingw.zip
-          move SDL2-*/x86_64-w64-mingw32 include
-          move SDL2-*/x86_64-w64-mingw32 lib
+  run: |
+    curl -LO https://github.com/libsdl-org/SDL/releases/download/release-2.30.3/SDL2-devel-2.30.3-mingw.zip
+    tar -xf SDL2-devel-2.30.3-mingw.zip
+    mkdir include
+    move SDL2-*/x86_64-w64-mingw32/include include/SDL2
+    move SDL2-*/x86_64-w64-mingw32/lib lib
+
 
       - name: 🧱 Build CHIP8 Emulator
         run: gcc main.c -Iinclude -Llib -lSDL2main -lSDL2 -o CHIP8-Emulator.exe
